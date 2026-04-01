@@ -1,9 +1,9 @@
 # AD_Export-Tool
 
-[![GitHub release](https://img.shields.io/badge/version-1.1-blue?style=flat-square)](https://github.com/karanikn/AD_Export-Tool)
+[![GitHub release](https://img.shields.io/badge/version-1.1-blue?style=flat-square)](https://github.com/karanikn/AD-Export-Tool)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1%20%7C%207.x-blue?style=flat-square&logo=powershell)](https://github.com/PowerShell/PowerShell)
 [![Platform](https://img.shields.io/badge/platform-Windows%20Server%20%7C%2010%20%7C%2011-lightgrey?style=flat-square&logo=windows)](https://www.microsoft.com/windows)
-[![License](https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square)](https://github.com/karanikn/AD_Export-Tool/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square)](https://github.com/karanikn/AD-Export-Tool/blob/main/LICENSE)
 [![AI Assisted](https://img.shields.io/badge/built%20with-Claude%20AI-orange?style=flat-square&logo=anthropic)](https://claude.ai)
 
 > **A WPF GUI tool for exporting Active Directory Users, Groups, Computers, OUs, GPOs, and FSMO Roles to CSV or TXT.**  
@@ -15,7 +15,7 @@
 
 | Main Window |
 | --- |
-| ![Main Window](Screenshots/AD_Export-Tool.png) |
+| ![Main Window](https://raw.githubusercontent.com/karanikn/AD-Export-Tool/main/Screenshots/AD_Export-Tool.png) |
 
 ---
 
