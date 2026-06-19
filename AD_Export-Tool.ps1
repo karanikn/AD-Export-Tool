@@ -465,9 +465,8 @@ $btnExportUsers.Add_Click({
         $fileName = "AD_Users." + $fileType.ToLower()
         $path = Join-Path $lblFolder.Text $fileName
 
-        $users = Get-ADUser -Filter * -Properties SamAccountName,DisplayName,Mail,Enabled,WhenCreated,Department,Title
-
-        $selection = $users | Select-Object SamAccountName, Name, DisplayName, Mail, Enabled, WhenCreated, Department, Title
+        $selection = Get-ADUser -Filter * -Properties SamAccountName,DisplayName,Mail,Enabled,WhenCreated,Department,Title |
+                     Select-Object SamAccountName, Name, DisplayName, Mail, Enabled, WhenCreated, Department, Title
 
         Set-ProgressState -Value 70 -Text "Exporting users to $fileName..."
         if ($fileType -eq "CSV") {
@@ -599,9 +598,8 @@ $btnExportComputers.Add_Click({
         $fileName = "AD_Computers." + $fileType.ToLower()
         $path = Join-Path $lblFolder.Text $fileName
 
-        $computers = Get-ADComputer -Filter * -Properties DNSHostName,OperatingSystem,OperatingSystemVersion,Enabled,LastLogonDate,WhenCreated
-
-        $selection = $computers | Select-Object Name,SamAccountName,DNSHostName,OperatingSystem,OperatingSystemVersion,Enabled,LastLogonDate,WhenCreated
+        $selection = Get-ADComputer -Filter * -Properties DNSHostName,OperatingSystem,OperatingSystemVersion,Enabled,LastLogonDate,WhenCreated |
+                     Select-Object Name,SamAccountName,DNSHostName,OperatingSystem,OperatingSystemVersion,Enabled,LastLogonDate,WhenCreated
 
         Set-ProgressState -Value 70 -Text "Exporting computers to $fileName..."
         if ($fileType -eq "CSV") {
@@ -672,9 +670,8 @@ $btnExportGpos.Add_Click({
         $fileName = "GPO_List." + $fileType.ToLower()
         $path = Join-Path $lblFolder.Text $fileName
 
-        $gpos = Get-GPO -All
-
-        $selection = $gpos | Select-Object DisplayName,Id,Owner,CreationTime,ModificationTime,GpoStatus,UserVersion,ComputerVersion,WmiFilter
+        $selection = Get-GPO -All |
+                     Select-Object DisplayName,Id,Owner,CreationTime,ModificationTime,GpoStatus,UserVersion,ComputerVersion,WmiFilter
 
         Set-ProgressState -Value 70 -Text "Exporting GPOs to $fileName..."
         if ($fileType -eq "CSV") {
